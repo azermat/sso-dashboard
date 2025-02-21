@@ -20,6 +20,8 @@ import type React from 'react';
 import Image from 'next/image';
 import { ModeToggle } from '@/components/mode-toggle';
 
+// ----------------------------------------------------------------------
+
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -47,6 +49,7 @@ export default function LoginPage() {
           'Falsches Passwort. Ich hoffe du bist kein Eindringling. 🤨',
         variant: 'destructive',
       });
+      console.error(error);
     } finally {
       setLoading(false);
     }
@@ -67,6 +70,7 @@ export default function LoginPage() {
         description: 'Google Login fehlgeschlagen. Versuche es erneut. 🤨',
         variant: 'destructive',
       });
+      console.log(error);
     }
   };
 

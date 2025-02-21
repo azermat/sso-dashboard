@@ -1,6 +1,6 @@
 # **SSO Dashboard**
 
-Welcome to the **SSO Dashboard**! This project is built using **Next.js 15**, **Firebase**, **ShadCN**, and **Tailwind CSS** to help you set up a simple yet powerful **Single Sign-On (SSO)** dashboard. Follow the instructions below to install, configure Firebase, and run the project locally.
+Welcome to the **SSO Dashboard**! This project is built using **Next.js 15**, **Firebase**, **ShadCN**, and **Tailwind CSS** to help you set up a simple fundament of a **Single Sign-On (SSO)** dashboard. Follow the instructions below to install, configure Firebase, and run the project locally.
 
 ---
 
@@ -8,7 +8,7 @@ Welcome to the **SSO Dashboard**! This project is built using **Next.js 15**, **
 
 Before you begin, ensure you have the following installed:
 
-- **[Node.js](https://nodejs.org/en/)** (Recommended version: v16.0 or above)
+- **[Node.js](https://nodejs.org/en/)** (Recommended version: v20.0 or above)
 - **[VS Code](https://code.visualstudio.com/)** (Or any other text editor)
 - **[Git](https://git-scm.com/)** (For version control)
 - **[Firebase Account](https://firebase.google.com/)**
@@ -56,7 +56,7 @@ yarn install
 
 2. **Get Firebase Config Values:**
    - After creating your Firebase project, navigate to the **Project Settings** by clicking the gear icon ⚙️ in the top left.
-   - Scroll down to the **Your Apps** section and select **Web**.
+   - Scroll to the **Your Apps** section and select **Web**.
    - Copy the Firebase config values for your app, including the following:
      - `apiKey`
      - `authDomain`

@@ -4,6 +4,8 @@ import { useAuth } from '@/lib/auth';
 import { Loader2 } from 'lucide-react';
 import type React from 'react';
 
+// ----------------------------------------------------------------------
+
 export default function AuthenticatedLayout({
   children,
 }: {

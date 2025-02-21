@@ -16,6 +16,8 @@ import { db } from '@/lib/firebase';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 
+// ----------------------------------------------------------------------
+
 export function DeleteSSODialog({
   open,
   onOpenChange,
@@ -45,6 +47,7 @@ export function DeleteSSODialog({
         description: 'Failed to delete SSO application',
         variant: 'destructive',
       });
+      console.log(error);
     } finally {
       setLoading(false);
     }

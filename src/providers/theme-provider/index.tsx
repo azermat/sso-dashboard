@@ -8,6 +8,8 @@ import React, {
   ReactNode,
 } from 'react';
 
+// ----------------------------------------------------------------------
+
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeContextProps {

@@ -20,11 +20,31 @@ import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
 
+// ----------------------------------------------------------------------
+
 const steps = [
   { id: 1, title: 'Authentifizierung' },
   { id: 2, title: 'Konfigurieren' },
   { id: 3, title: 'Verifizieren' },
 ];
+
+//optional for framer motion
+const slideVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,
+    opacity: 0,
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 1000 : -1000,
+    opacity: 0,
+  }),
+};
 
 export function AddSSOModal({
   open,
@@ -52,6 +72,7 @@ export function AddSSOModal({
     if (step > 1) setStep(step - 1);
   };
 
+  //replace this with a better form handling
   const handleSubmit = async () => {
     try {
       setLoading(true);
@@ -79,26 +100,10 @@ export function AddSSOModal({
         description: 'Fehlgeschlagen, ich konnte die SSO App nicht hinzufügen',
         variant: 'destructive',
       });
+      console.log(error);
     } finally {
       setLoading(false);
     }
-  };
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
   };
 
   return (

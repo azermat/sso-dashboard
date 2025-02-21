@@ -14,6 +14,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { ModeToggle } from '@/components/mode-toggle';
 
+// ----------------------------------------------------------------------
+
 export function Navbar() {
   const { user, signOut } = useAuth();
 

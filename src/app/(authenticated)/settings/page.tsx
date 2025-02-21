@@ -23,17 +23,19 @@ import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { useTheme } from '@/providers/theme-provider';
 
+// ----------------------------------------------------------------------
+
 export default function SettingsPage() {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
   const user = auth.currentUser;
+  const { setTheme } = useTheme();
 
   const [settings, setSettings] = useState<UserSettings>({
     theme: 'system',
     emailNotifications: true,
     twoFactorEnabled: false,
   });
-  const { setTheme } = useTheme();
 
   const [formData, setFormData] = useState({
     displayName: user?.displayName || '',
@@ -65,6 +67,7 @@ export default function SettingsPage() {
         description: 'Failed to update profile',
         variant: 'destructive',
       });
+      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -89,6 +92,7 @@ export default function SettingsPage() {
         description: 'Failed to update settings',
         variant: 'destructive',
       });
+      console.log(error);
     } finally {
       setLoading(false);
     }
