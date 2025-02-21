@@ -108,7 +108,7 @@ export function AddSSOModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className='flex flex-col min-w-[700px] px-10'>
+      <DialogContent className='flex flex-col min-w-[700px] px-10 overflow-hidden'>
         <DialogHeader>
           <DialogTitle>Neuer Login</DialogTitle>
           <DialogDescription>
