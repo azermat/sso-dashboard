@@ -53,6 +53,7 @@ yarn install
 
    - Open the [Firebase Console](https://console.firebase.google.com/).
    - Click **Add Project** and follow the steps to create a new Firebase project.
+   - Set up **Authentication** and follow the steps to set it up.
 
 2. **Get Firebase Config Values:**
    - After creating your Firebase project, navigate to the **Project Settings** by clicking the gear icon ⚙️ in the top left.
