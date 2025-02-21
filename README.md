@@ -171,7 +171,7 @@ Feel free to contribute to this repository by forking and submitting pull reques
 
 ---
 
-## **Acknowledgments**
+## **Tech-Stack**
 
 - **Next.js 15** for building an amazing framework.
 - **Firebase** for providing powerful tools to manage authentication and databases.
